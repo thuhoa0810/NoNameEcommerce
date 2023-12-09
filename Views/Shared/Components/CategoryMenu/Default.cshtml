@@ -1,0 +1,11 @@
+﻿@model IEnumerable<Menu>
+
+<li class="dropdown">
+    <a asp-controller="" class="link-navigation trigger-drop">Menu<i class="arrow"></i></a>
+    <ul class="drop">
+        @foreach(var category in Model)
+        {
+            <li><a asp-controller="Menu" asp-action="" asp-route-id="@category.Id" class="link-navigation">@category.Name</a></li>
+        }
+    </ul>
+</li>
